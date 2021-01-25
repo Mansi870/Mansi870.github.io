@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant App</title>
+  <link type="text/css" rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script type="text/javascript" defer src="realTime.js"></script>
+</head>
+<body onload="setTop()">
+  <h2 class="headColor">Restaurant Name</h2>
+  <hr>
+  <div class="container-fluid text-center">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>North Indian</h3>
+              <img src="img_avatar.png" alt="northIndianFoodImg" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <p>Menu</p>
+              <ul class="list-group">
+                <li class="list-group-item listItemColor">Butter Chicken 150/- <button type="button" onclick="removeOrder('ButterChicken')" class="btn btn-danger btn-sm">-</button>
+                  <span id="ButterChicken" class="badge">0</span>
+                  <button onclick="addOrder('ButterChicken')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Roti 30/- <button type="button" onclick="removeOrder('Roti')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Roti" class="badge">0</span>
+                  <button onclick="addOrder('Roti')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Dal Tadka 20/- <button type="button" onclick="removeOrder('DalTadka')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="DalTadka" class="badge">0</span>
+                  <button onclick="addOrder('DalTadka')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Paratha 45/-<button type="button" onclick="removeOrder('Paratha')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Paratha" class="badge">0</span>
+                  <button onclick="addOrder('Paratha')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Chinese</h3>
+              <img src="img_avatar.png" alt="northIndianFoodImg" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <p>Menu</p>
+              <ul class="list-group">
+                <li class="list-group-item listItemColor">Noodles 100/- <button type="button" onclick="removeOrder('Noodles')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Noodles" class="badge">0</span>
+                  <button onclick="addOrder('Noodles')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Rice 100/- <button type="button" onclick="removeOrder('Rice')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Rice" class="badge">0</span>
+                  <button onclick="addOrder('Rice')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Manchuria 80/- <button type="button" onclick="removeOrder('Manchuria')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Manchuria" class="badge">0</span>
+                  <button onclick="addOrder('Manchuria')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Soup 60/- <button type="button" onclick="removeOrder('Soup')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Soup" class="badge">0</span>
+                  <button onclick="addOrder('Soup')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Mediterranean</h3>
+              <img src="img_avatar.png" alt="northIndianFoodImg" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <p>Menu</p>
+              <ul class="list-group">
+                <li class="list-group-item listItemColor">Salad 100/- <button type="button" onclick="removeOrder('Salad')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Salad" class="badge">0</span>
+                  <button onclick="addOrder('Salad')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Shakshuka 100/- <button type="button" onclick="removeOrder('Shakshuka')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Shakshuka" class="badge">0</span>
+                  <button onclick="addOrder('Shakshuka')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Briam 150/- <button type="button" onclick="removeOrder('Briam')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Briam" class="badge">0</span>
+                  <button onclick="addOrder('Briam')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Tabouli 180/- <button type="button" onclick="removeOrder('Tabouli')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Tabouli" class="badge">0</span>
+                  <button onclick="addOrder('Tabouli')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>South Indian</h3>
+              <img src="img_avatar.png" alt="northIndianFoodImg" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <p>Menu</p>
+              <ul class="list-group">
+                <li class="list-group-item listItemColor">Dosa 50/- <button type="button" onclick="removeOrder('Dosa')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Dosa" class="badge">0</span>
+                  <button onclick="addOrder('Dosa')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Sambhar 50/- <button type="button" onclick="removeOrder('Sambhar')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Sambhar" class="badge">0</span>
+                  <button onclick="addOrder('Sambhar')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Idli 45/- <button type="button" onclick="removeOrder('Idli')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Idli" class="badge">0</span>
+                  <button onclick="addOrder('Idli')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Biryani 120/- <button type="button" onclick="removeOrder('Biryani')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Biryani" class="badge">0</span>
+                  <button onclick="addOrder('Biryani')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Italian</h3>
+              <img src="img_avatar.png" alt="northIndianFoodImg" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <p>Menu</p>
+              <ul class="list-group">
+                <li class="list-group-item listItemColor">Pizza 150/- <button type="button" onclick="removeOrder('Pizza')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Pizza" class="badge">0</span>
+                  <button onclick="addOrder('Pizza')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Pasta 120/- <button type="button" onclick="removeOrder('Pasta')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Pasta" class="badge">0</span>
+                  <button onclick="addOrder('Pasta')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">Spaghetti 100/- <button type="button" onclick="removeOrder('Spaghetti')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="Spaghetti" class="badge">0</span>
+                  <button onclick="addOrder('Spaghetti')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+                <li class="list-group-item listItemColor">French Toast 80/- <button type="button" onclick="removeOrder('FrenchToast')"
+                    class="btn btn-danger btn-sm">-</button>
+                  <span id="FrenchToast" class="badge">0</span>
+                  <button onclick="addOrder('FrenchToast')" type="button" class="btn btn-success btn-sm">+</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="cart"><a onclick="total()" href="checkout.html" class="btn btn-primary btn-lg" role="button">Cart</a></h2>
+  <hr>
+  <div id="topDishes" class="container-fluid text-center">
+    <h4>Top 5 Dishes</h4>
+    
+  </div>
+</body>
+</html>
