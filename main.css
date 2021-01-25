@@ -9,7 +9,7 @@
 }
 
 .menu {
-  font-size: 22px;
+  font-size: 8px;
   text-align: center;
   width: 50%;
   margin: auto;
@@ -17,8 +17,8 @@
 
 .menu button {
   float: right;
-  padding: 5px;
-  margin: 2px;
+  padding: 2px;
+  margin: 1px;
 }
 
 .menu span {
