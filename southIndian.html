@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant App</title>
+  <link type="text/css" rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script type="text/javascript" defer src="realTime.js"></script>
+</head>
+
+<body onload="total()">
+  <h2 class="headColor">South Indian Menu</h2>
+  <div class="menu">
+    <p>Menu</p>
+    <ul class="list-group">
+      <li class="list-group-item listItemColor">Dosa 50/- <button type="button" onclick="removeOrder('Dosa')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Dosa" class="badge">0</span>
+        <button onclick="addOrder('Dosa')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Sambhar 50/- <button type="button" onclick="removeOrder('Sambhar')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Sambhar" class="badge">0</span>
+        <button onclick="addOrder('Sambhar')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Idli 45/- <button type="button" onclick="removeOrder('Idli')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Idli" class="badge">0</span>
+        <button onclick="addOrder('Idli')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Biryani 120/- <button type="button" onclick="removeOrder('Biryani')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Biryani" class="badge">0</span>
+        <button onclick="addOrder('Biryani')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+    </ul>
+      <h2 class="cart"><a onclick="checkoutHTML()" href="checkout.html" class="btn btn-primary btn-lg" role="button">Cart</a>
+      </h2>
+  </div>
+</body>
+
+</html>

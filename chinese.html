@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant App</title>
+  <link type="text/css" rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script type="text/javascript" defer src="realTime.js"></script>
+</head>
+
+<body onload="total()">
+  <h2 class="headColor">Chinese Menu</h2>
+  <div class="menu">
+    <p>Menu</p>
+    <ul class="list-group">
+      <li class="list-group-item listItemColor">Noodles 100/- <button type="button" onclick="removeOrder('Noodles')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Noodles" class="label label-primary">0</span>
+        <button onclick="addOrder('Noodles')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Rice 100/- <button type="button" onclick="removeOrder('Rice')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Rice" class="label label-primary">0</span>
+        <button onclick="addOrder('Rice')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Manchuria 80/- <button type="button" onclick="removeOrder('Manchuria')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Manchuria" class="label label-primary">0</span>
+        <button onclick="addOrder('Manchuria')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Soup 60/- <button type="button" onclick="removeOrder('Soup')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Soup" class="label label-primary">0</span>
+        <button onclick="addOrder('Soup')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+    </ul>
+    <h2 class="cart"><a onclick="checkoutHTML()" href="checkout.html" class="btn btn-primary btn-lg" role="button">Cart</a>
+    </h2>
+  </div>
+</body>
+
+</html>

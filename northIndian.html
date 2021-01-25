@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant App</title>
+  <link type="text/css" rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script type="text/javascript" defer src="realTime.js"></script>
+</head>
+
+<body>
+  <h2 class="headColor">North Indian Menu</h2>
+  <div class="menu">
+    <p>Menu</p>
+    <ul class="list-group">
+      <li class="list-group-item listItemColor">Butter Chicken 150/- <button type="button"
+          onclick="removeOrder('ButterChicken')" class="btn btn-danger ">-</button>
+        <span id="ButterChicken" class="label label-primary">0</span>
+        <button onclick="addOrder('ButterChicken')" type="button" class="btn btn-success ">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Roti 30/- <button type="button" onclick="removeOrder('Roti')"
+          class="btn btn-danger ">-</button>
+        <span id="Roti" class="label label-primary">0</span>
+        <button onclick="addOrder('Roti')" type="button" class="btn btn-success ">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Dal Tadka 20/- <button type="button" onclick="removeOrder('DalTadka')"
+          class="btn btn-danger ">-</button>
+        <span id="DalTadka" class="label label-primary">0</span>
+        <button onclick="addOrder('DalTadka')" type="button" class="btn btn-success ">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Paratha 45/-<button type="button" onclick="removeOrder('Paratha')"
+          class="btn btn-danger ">-</button>
+        <span id="Paratha" class="label label-primary">0</span>
+        <button onclick="addOrder('Paratha')" type="button" class="btn btn-success ">+</button>
+      </li>
+    </ul>
+    <h2 class="cart"><a onclick="checkoutHTML()" href="checkout.html" class="btn btn-primary btn-lg" role="button">Cart</a>
+    </h2>
+  </div>
+</body>
+
+</html>

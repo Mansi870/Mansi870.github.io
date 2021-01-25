@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant App</title>
+  <link type="text/css" rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script type="text/javascript" defer src="realTime.js"></script>
+</head>
+
+<body onload="total()">
+  <h2 class="headColor">Mediterranean Menu</h2>
+  <div class="menu">
+    <p>Menu</p>
+    <ul class="list-group">
+      <li class="list-group-item listItemColor">Salad 100/- <button type="button" onclick="removeOrder('Salad')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Salad" class="badge">0</span>
+        <button onclick="addOrder('Salad')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Shakshuka 100/- <button type="button" onclick="removeOrder('Shakshuka')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Shakshuka" class="badge">0</span>
+        <button onclick="addOrder('Shakshuka')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Briam 150/- <button type="button" onclick="removeOrder('Briam')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Briam" class="badge">0</span>
+        <button onclick="addOrder('Briam')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Tabouli 180/- <button type="button" onclick="removeOrder('Tabouli')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Tabouli" class="badge">0</span>
+        <button onclick="addOrder('Tabouli')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+    </ul>
+    <h2 class="cart"><a onclick="checkoutHTML()" href="checkout.html" class="btn btn-primary btn-lg" role="button">Cart</a>
+    </h2>
+  </div>
+</body>
+
+</html>

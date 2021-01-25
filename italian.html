@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant App</title>
+  <link type="text/css" rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script type="text/javascript" defer src="realTime.js"></script>
+</head>
+
+<body onload="total()">
+  <h2 class="headColor">Italian Menu</h2>
+  <div class="menu">
+    <p>Menu</p>
+    <ul class="list-group">
+      <li class="list-group-item listItemColor">Pizza 150/- <button type="button" onclick="removeOrder('Pizza')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Pizza" class="badge">0</span>
+        <button onclick="addOrder('Pizza')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Pasta 120/- <button type="button" onclick="removeOrder('Pasta')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Pasta" class="badge">0</span>
+        <button onclick="addOrder('Pasta')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+      <li class="list-group-item listItemColor">Spaghetti 100/- <button type="button" onclick="removeOrder('Spaghetti')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="Spaghetti" class="badge">0</span>
+        <button onclick="addOrder('Spaghetti')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+      <li class="list-group-item listItemColor">French Toast 80/- <button type="button" onclick="removeOrder('FrenchToast')"
+          class="btn btn-danger btn-sm">-</button>
+        <span id="FrenchToast" class="badge">0</span>
+        <button onclick="addOrder('FrenchToast')" type="button" class="btn btn-success btn-sm">+</button>
+      </li>
+    </ul>
+      <h2 class="cart"><a onclick="checkoutHTML()" href="checkout.html" class="btn btn-primary btn-lg" role="button">Cart</a>
+      </h2>
+  </div>
+</body>
+
+</html>
