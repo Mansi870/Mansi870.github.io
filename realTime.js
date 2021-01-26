@@ -62,7 +62,7 @@ function total() {
   let storedLastOrders = JSON.parse(localStorage.getItem('lastOrders'))
   let storedTopDishes = JSON.parse(localStorage.getItem('topDishes'))
   let orderList = document.getElementById('orderList')
-  let storedOrderNum = JSON.parse(localStorage.getItem('orderNum'))
+  let storedOrderNum = JSON.parse(localStorage.getItem('orderNumber'))
   let sum = 0
   let finalOrder = {}
   for (i = 0; i < storedCurrentList.length; i++) {
@@ -107,7 +107,7 @@ function total() {
     orderID.innerHTML = `Your Order Number is${orderNum}`
     lastOrders.unshift([orderNum, finalOrderList.join()])
     localStorage.setItem('lastOrders', JSON.stringify(lastOrders))
-    localStorage.setItem('orderNum', JSON.stringify(orderNum))
+    localStorage.setItem('orderNumber', JSON.stringify(orderNum))
   }
   orderList.appendChild(orderID)
 }
